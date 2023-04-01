@@ -12,10 +12,10 @@ import {
     AlertDescription,
   } from '@chakra-ui/react'
 import styled from "@emotion/styled"
-import styles from "../styles/Products.module.css"
+// import styles from "../styles/Products.module.css"
 import { Grid, GridItem } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 const intastate={
     products:[],
     isLoading: false,
@@ -69,63 +69,13 @@ useEffect(()=>{
 
 },[])
 
-console.log(products)
-    if(isError){
-        return (
-            <Alert height={"100px"} textAlign={"Center"} status='error'>
-  <AlertIcon />
-  <AlertTitle>SOMETHING WENT WRONG</AlertTitle>
-  <AlertDescription>server is not responding</AlertDescription>
-</Alert>
-        )
-    }
-    if(isLoading){
-        return (
-            <Stack>
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-  <Skeleton height='100px' />
-</Stack>
-        )
-    }
-    return (
-       <div>
-        <Grid templateColumns='repeat(5, 1fr)' gap={6}>
-        {
-            products.map((el)=>(
-                <GridItem key={el.id} className={styles.item}> 
-                <img src={el.image_url} alt="" />
-                    <b>  {el.brand} </b>
-                    <p>{el.brand_description}</p>
-                    <b> Rs. {el.price}  </b>
-                    <p> Rating {el.ratings} <StarIcon  style={{marginTop:"-5px"}}/>  </p>
-                    <button className={styles.cartBtn}>Add To Cart</button>
-                </GridItem> 
 
-            ))
-        }
+   
+        return (
+            <div>
                 
-            
-
-      
-      </Grid>
-        {/* <Footer/> */}
-       </div>
-        
-
-      
-    )
+            </div>
+        )
+   
 }
 export default Product;
