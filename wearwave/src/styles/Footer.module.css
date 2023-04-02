@@ -1,0 +1,42 @@
+.footer{
+margin-top: 20px;
+ background-color: #fafbfc; 
+ padding: 20px 50px;  
+}
+p{
+    color: #94969f;
+}
+h2{
+    font-weight: 600;
+    padding: 10px 0px;
+    color: #282c3f;
+}
+.firstFooter{
+    display: flex;
+    justify-content: space-around;
+}
+.sociel{
+    display: flex;
+    gap: 20px;
+}
+.sociel > img{
+    height: 30px;
+}
+.apps{
+    gap: 20px;
+    display: flex;
+}
+.apps > img{
+    height: 50px;
+}
+ .orgi > div{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+ }
+ .orgi img{
+    height: 50px;
+ }
+ hr{
+    margin: 40px;
+ }

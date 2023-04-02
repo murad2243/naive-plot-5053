@@ -1,0 +1,81 @@
+.dayDeals{
+    display:flex
+}
+.dayDeals > img{
+    height: 249px;
+}
+.heading{
+    font-weight:600 ;
+    font-size: xx-large;
+    padding: 30px 20px;
+}
+.brands{
+    display: flex;
+}
+.brands > img{
+    height: 217px;
+}
+.PICKS{
+    display: flex;
+}
+.PICKS > img{
+    height: 232px;   
+}
+.bags{
+    display: flex;
+    justify-content: space-between
+}
+.bags > img{
+    height: 205px;
+}
+.topBrands{
+    display: flex;
+}
+.topBrands > img{
+    height: 270px;
+}
+.slashed{
+    display: flex;
+}
+.slashed > img {
+    height: 220px;
+}
+.bBuys{
+    display: flex;
+
+}
+.bBuys > img{
+    height: 203px;
+}
+.luxe{
+    display: flex;
+}
+.luxe > img{
+    height: 217px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.cards > img{
+    height: 290px;
+}
+.hotttest{
+    display: flex;
+}
+.hotttest > img{
+    height: 248px;
+}
+.occ{
+    justify-content: space-between;
+    display: flex;
+}
+.occ > img {
+    height: 230px;
+}
+.influ{
+    display: flex;
+}
+.influ > img{
+    height: 158px;
+}
