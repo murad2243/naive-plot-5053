@@ -3,10 +3,14 @@
  display: flex;
  justify-content: space-between;
  /* padding: 20px */
+ position: fixed;
 }
 
 .NavOptions{
+  position: fixed;
+  background-color: white;
   padding: 20px;
+  width: 100%;
     /* border-bottom: 2px solid #a3a3a3; */
     display: flex;
     justify-content: space-between;
