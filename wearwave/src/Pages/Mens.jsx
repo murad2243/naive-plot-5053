@@ -4,6 +4,7 @@ import {useState, useEffect} from "react"
 import { Center, Skeleton, SkeletonCircle, SkeletonText, Stack } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 // import Footer from "../components/Footer";
+import ShowData from "../components/ShowData"
 
 import {
     Alert,
@@ -49,14 +50,14 @@ const reducer = (state, action)=>{
     }
 }
 
-function Product(){
+function Mens(){
 let [data, setData] = useState([])
 
 const [state, dispatch] = useReducer(reducer, intastate);
 const {products, isLoading, isError} = state;
 const getData =  ()=>{
     dispatch({type:"FETCH_REQUEST"})
-    axios.get("http://localhost:3001/mensData").then((res)=>{
+    axios.get("http://localhost:3001/prods").then((res)=>{
         dispatch({type: "FETCH_SUCESS", payload: res.data})
         // console.log(res.data);
     }).catch((err)=>{
@@ -68,14 +69,45 @@ useEffect(()=>{
     getData()
 
 },[])
+console.log(state.products);
+
+state.products = state.products.filter((el)=>{
+    return el.gender == "Male";
+})
+// console.log(newData);
 
 
+if(isLoading){
+    return <div>Loading...</div>
+}
+else if(isError){
+    return (
+        <h1>Something went wrong</h1>
+    )
+}
+else{
+    return (
+            <ShowData data={state.products} /> 
+    )
+}
    
-        return (
-            <div>
-                
+        // if(isLoading){
+        //     return (
+        //         <div>Loading..</div>
+        //     )
+        // }
+        // else if(isError){
+        //     <h2>Something went wrong</h2>
+        // }
+        // else{
+        //     return(
+        //         <Mens  data={data}/>
+        //     )
+        // }
+        return <div>
+            skd
             </div>
-        )
+        
    
 }
-export default Product;
+export default Mens;

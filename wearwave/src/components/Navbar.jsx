@@ -8,7 +8,7 @@ import {SearchIcon} from "@chakra-ui/icons"
 function Navbar(){
     
     return (
-        
+        <div>
 <div className={styles.NavOptions}>
         
         
@@ -57,16 +57,23 @@ function Navbar(){
             <Avatar height="30px" width="30px" src='https://cdn-icons-png.flaticon.com/512/1144/1144760.png' />
             <p style={{fontSize:"13px", color:"grey"}} >profile</p>
             </div>
-            <div>
+            <Link to="/cart">
             <Avatar height="30px" width="30px" src='https://cdn-icons-png.flaticon.com/512/1656/1656850.png' />
                 <p style={{fontSize:"13px", color:"grey"}}>bag</p>
-            </div>
+            </Link>
     
     
     </Stack>
 
     
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        </div>
+        
+
         
     
     )
