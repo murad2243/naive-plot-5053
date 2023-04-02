@@ -73,3 +73,9 @@
 .occ > img {
     height: 230px;
 }
+.influ{
+    display: flex;
+}
+.influ > img{
+    height: 158px;
+}
